@@ -3,6 +3,7 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 -Main
 -Text
+-Sticky-Nav
  */
 /* 
 ========================================================================================
@@ -11,7 +12,9 @@ Main
 */
 body {
   color: #3D3B3B;
-  font-family: Avenir, sans-serif, serif; }
+  font-family: Avenir, sans-serif, serif;
+  margin: 0;
+  padding: 0; }
 
 img {
   max-width: 100%;
@@ -88,3 +91,41 @@ img {
 Text
 ========================================================================================
 */
+/* 
+========================================================================================
+Sticky-Nav
+========================================================================================
+*/
+.nav {
+  padding: 0px 0;
+  background-color: white;
+  position: -webkit-sticky;
+  text-align: center; }
+
+.nav ul {
+  padding: 0px;
+  margin: 0 25px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top; }
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0; }
+
+.logo {
+  background: url("https://twemoji.maxcdn.com/2/svg/1f525.svg") no-repeat;
+  background-size: 20px;
+  background-position: 0 100%;
+  width: 20px;
+  height: 20px;
+  margin-top: 20px !important;
+  position: relative;
+  left: 25px; }
+
+.floatLeft {
+  float: left; }
