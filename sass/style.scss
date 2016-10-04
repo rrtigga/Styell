@@ -20,6 +20,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
   vertical-align: bottom;
 }
 
@@ -27,6 +28,7 @@ img {
   width: 92.5%;
   padding: 1em;
   margin: 0 auto;
+
 }
 
 .masonry {
@@ -43,14 +45,24 @@ img {
 .masonry .brick {
   margin-bottom: 30px;
 }
+
 .masonry .brick img {
   -moz-transition: all .5s ease-in-out;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+
+  //with react
+  margin: 20px 0px;
+
 }
-.masonry .brick:hover img {
+
+.masonry .brick img:hover {
   opacity: .75;
+  // -moz-transform: scale(1.1);
+  // -webkit-transform: scale(1.1);
+  // transform: scale(1.1);
 }
+
 .masonry.bordered {
   -moz-column-rule: 1px solid #eee;
   -webkit-column-rule: 1px solid #eee;
@@ -103,7 +115,6 @@ img {
 Text
 ========================================================================================
 */
-
 /* latin */
 @font-face {
   font-family: 'Fredoka One';
@@ -120,6 +131,15 @@ Text
 .quote {
   font-size: 48px;
   font-weight: 400;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #3D3B3B;
+}
+
+.nav a:hover {
+  color: #DD3A48;
 }
 
 /* 
