@@ -166,14 +166,17 @@ var items = [
       "description": "Nike Hyperdunk 16 men",
       "productLink": "http://store.nike.com/us/en_us/pd/hyperdunk-2016-mens-basketball-shoe/pid-11056357/pgid-11230746",
       "imageURL":"http://images.nike.com/is/image/DotCom/844359_A_V1?&$img=844359_661_A_PREM&$PDP_HERO$"
+   },
+   {
+      "id": "28",
+      "description": "Left shark unisex",
+      "productLink": "https://www.redbubble.com/people/perdita00/works/13883235-dance?p=t-shirt&style=mens&body_color=navy&print_location=front",
+      "imageURL":"https://ih1.redbubble.net/image.44331569.3235/ra,unisex_tshirt,x3104,322e3f:696a94a5d4,front-c,650,630,900,975-bg,f8f8f8.u1.jpg"
    }
 ];
 
 
-
 /*React Code Below */
-
-
 var RepeatModule = React.createClass({
    getInitialState: function() {
       return { items: [] }

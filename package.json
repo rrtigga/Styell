@@ -15,7 +15,11 @@
     "morgan": "~1.6.1",
     "node-sass": "^3.10.1",
     "node-sass-middleware": "^0.9.8",
-    "serve-favicon": "~2.3.0"
+    "request": "^2.75.0",
+    "scrape-it": "^3.2.2",
+    "serve-favicon": "~2.3.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
   },
   "devDependencies": {}
 }
