@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+-Main
+-Text
+ */
+/* 
+========================================================================================
+Main
+========================================================================================
+*/
+body {
+  color: #3D3B3B;
+  font-family: Avenir, sans-serif, serif;
+  margin: 0;
+  padding: 0; }
+
+#hero {
+  background: url("../images/hero.png") 55% 20% no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 0;
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  #hero button {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    background-color: #1BCF64;
+    padding: 20px 100px;
+    border: none;
+    margin-left: 24px;
+    transition: background-color .3s ease;
+    border-radius: 48px;
+    letter-spacing: 0.35px; }
+
+/* 
+========================================================================================
+Text
+========================================================================================
+*/
+.headline {
+  font-size: 56px;
+  color: white; }
+
+/* 
+========================================================================================
+Container
+========================================================================================
+*/
+.container {
+  margin: 0 25px; }

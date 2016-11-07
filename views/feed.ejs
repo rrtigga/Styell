@@ -16,7 +16,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0, maximum-scale=1.0">
    <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.png'/>
    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css' />
-   <link rel='stylesheet' href='/stylesheets/landing.css' />
+   <link rel='stylesheet' href='/stylesheets/style.css' />
    <!-- scripts below -->
 
    <!-- The core React library -->
@@ -27,16 +27,28 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="/javascripts/jquery-scrolltofixed-min.js" type="text/javascript"></script>
-
+  <script src="/javascripts/clothes.js" type="text/babel"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.nav').scrollToFixed();
+    });
+  </script>
+   <!-- bundle below -->
+  <script src="./bundle.js" type="text/javascript"></script>
 
   </head>
   <body>
-    <div id="hero">
-      <div class="container">
-        <h1 class="headline">Styell, all clothes in one place.</h1>
-        <button>Get Started</button>
-      </div>
-    </div>
-
+  <div class="nav">
+  	<div class="floatLeft logo"></div>
+		<a href=""><ul><h3>Styell</h3></ul></a>
+<!-- 		<a href=""><ul><h3>Men</h3></ul></a>
+		<a href=""><ul><h3>Women</h3></ul></a> -->
+	</div>
+	<div class="wrapper">
+  		<h1 class="FredokaOne quote">Life's too short to wear boring clothes.</h1>
+  		<div class="masonry">
+  			<div id="clothing-content"></div>
+  		</div>
+	</div>
   </body>
 </html>
