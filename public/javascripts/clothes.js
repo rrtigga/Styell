@@ -185,7 +185,12 @@ var RepeatModule = React.createClass({
       var listItems = this.props.items.map(function(item) {
          return (
             <div className='brick'>
-               <a target='_blank' href={item.productLink}><img src={item.imageURL}/></a>
+               <div>
+                  <a target='_blank' href={item.productLink}><img src={item.imageURL}/></a>
+                  <p className='itemName'>Short Sleeve Oxford Dress Shirt, White, Large</p>
+                  <p className='storeName'>Nike Factory Store</p>
+                  <img className='foundPicture' src='../images/rohit.png'/>
+               </div>
             </div>
          );
       });

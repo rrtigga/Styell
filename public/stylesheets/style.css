@@ -39,6 +39,23 @@ img {
 
 .masonry .brick {
   margin-bottom: 30px; }
+  .masonry .brick .itemName {
+    color: #9B9B9B;
+    font-size: 16px;
+    font-weight: 300;
+    display: inline-block; }
+  .masonry .brick .storeName {
+    font-size: 16px;
+    font-weight: 500;
+    color: #4A4A4A;
+    display: inline-block;
+    float: right; }
+  .masonry .brick .foundPicture {
+    max-width: 30px;
+    height: auto;
+    display: block;
+    float: left;
+    margin-top: 2%; }
 
 .masonry .brick img {
   -moz-transition: all .5s ease-in-out;
@@ -162,112 +179,3 @@ Sticky-Nav
 Card
 ========================================================================================
 */
-.card {
-  background-color: white;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-  color: #4a4a4a;
-  max-width: 100%;
-  position: relative;
-  width: 300px; }
-
-.card-image {
-  display: block;
-  position: relative; }
-
-.card-content {
-  padding: 20px; }
-
-.card-content .title + .subtitle {
-  margin-top: -20px; }
-
-.image {
-  display: block;
-  position: relative; }
-
-.image img {
-  display: block;
-  height: auto;
-  width: 100%; }
-
-.media-number,
-.media-left,
-.media-right {
-  -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0; }
-
-.media-number {
-  background-color: whitesmoke;
-  border-radius: 290486px;
-  display: inline-block;
-  font-size: 18px;
-  height: 32px;
-  line-height: 24px;
-  margin-right: 10px;
-  min-width: 32px;
-  padding: 4px 8px;
-  text-align: center;
-  vertical-align: top; }
-
-.media-left {
-  margin-right: 10px; }
-
-.media-right {
-  margin-left: 10px; }
-
-.media-content {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  text-align: left; }
-
-.media {
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: left; }
-
-.media .content:not(:last-child) {
-  margin-bottom: 10px; }
-
-.media .media {
-  border-top: 1px solid rgba(219, 219, 219, 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 10px; }
-
-.media .media .content:not(:last-child),
-.media .media .control:not(:last-child) {
-  margin-bottom: 5px; }
-
-.media .media .media {
-  padding-top: 5px; }
-
-.media .media .media + .media {
-  margin-top: 5px; }
-
-.media + .media {
-  border-top: 1px solid rgba(219, 219, 219, 0.5);
-  margin-top: 10px;
-  padding-top: 10px; }
-
-.media.is-large + .media {
-  margin-top: 20px;
-  padding-top: 20px; }
-
-@media screen and (min-width: 769px) {
-  .media.is-large .media-number {
-    margin-right: 20px; } }
-
-.title,
-.subtitle {
-  font-weight: 300;
-  word-break: break-word; }
