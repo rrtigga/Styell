@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(console) {// var request = require('request');
+	// var request = require('request');
 	// request('http://www.rohittigga.com', function (error, response, body) {
 	//   if (!error && response.statusCode == 200) {
 	//     console.log(body) // Show the HTML for the Google homepage.
@@ -55,17 +55,17 @@
 	var request = __webpack_require__(2);
 
 	var options = {
-	  url: 'http://www.rohittigga.com'
+	  url: 'http://www.rohittigga.com',
+	  withCredentials: false
 	};
 
 	function callback(error, response, body) {
 	  if (!error && response.statusCode == 200) {
-	    console.log(body);
+	    window.console.log(body);
 	  }
 	}
 
 	request(options, callback);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
 /* 1 */

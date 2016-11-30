@@ -9,12 +9,13 @@
 var request = require('request');
 
 var options = {
-  url: 'http://www.rohittigga.com'
+  url: 'http://www.rohittigga.com',
+  withCredentials: false
 };
 
 function callback(error, response, body) {
   if (!error && response.statusCode == 200) {
-    console.log(body);
+    window.console.log(body);
   }
 }
 
