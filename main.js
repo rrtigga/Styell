@@ -5,17 +5,24 @@
 //   }
 // })
 // console.log("after request");
-
 var request = require('request');
+var cors = require('cors');
+var express = require('express');
+var app = express();
+app.use(cors());
+app.options('*', cors());
 
 var options = {
-  url: 'http://www.rohittigga.com',
+  url: 'http://www.redbubble.com',
   withCredentials: false
 };
 
 function callback(error, response, body) {
+	window.console.log("callback is being called");
   if (!error && response.statusCode == 200) {
-    window.console.log(body);
+    alert(body);
+  } else {
+  	window.console.log(error);
   }
 }
 
