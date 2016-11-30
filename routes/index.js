@@ -8,6 +8,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/feed', function(req, res, next) {
   res.render('feed', { title: 'Express' });
+  console.log("feed is here");
 });
 
 

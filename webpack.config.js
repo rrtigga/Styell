@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var fs = require('fs');
+var request = require('request');
 var CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 
@@ -10,10 +11,18 @@ module.exports = {
         path: __dirname,
         filename: "bundle.js"
     },
-    plugins: [
-        new CaseSensitivePathsPlugin()
-    ],
-     resolve: {
-        modulesDirectories: ['./app/', './node_modules']
+    module: {
+    loaders: [
+      { test: /\.json$/, loader: 'json-loader' }
+        ]
+    },
+    resolve: {
+        extensions: ['', '.webpack.js', '.web.js', '.js']
+    },
+    node: {
+        console: 'empty',
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
     }
 }

@@ -35,6 +35,12 @@
   </script>
    <!-- bundle below -->
   <script src="./bundle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $.get("http://localhost:3000", function(response){
+      console.log("ajax successful");
+      console.log(response);
+    })
+  </script>
 
   </head>
   <body>
