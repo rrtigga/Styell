@@ -6,11 +6,23 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var connect = require('connect')
+var scrape = require('./routes/scrape');
+var connect = require('connect');
 var sassMiddleware = require('node-sass-middleware');
-
+var fs = require('fs');
+var request = require('request');
+var cheerio = require('cheerio');
 var cors = require('cors');
 var app = express();
+
+//scraping test
+app.get('/rohit', function(req, res){
+  request('http://www.rohittigga.com', function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      res.send(body); // Show the HTML for the Google homepage.
+    }
+  })
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,11 +46,17 @@ app.use(
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, '')));
 
-app.use(cors());
-app.options('*', cors());
+// use it before all route definitions
+
+app.use(cors({
+  "origin": "*",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false
+}));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/scrape', scrape);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,1 +1,5 @@
 # Styell
+
+npm install
+
+nodemon
