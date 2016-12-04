@@ -212,10 +212,34 @@ Sticky-Nav
   float:right;
 }
 
-
+.postButton {
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .125em;
+  line-height: 1.58333;
+  min-width: 75px;
+  padding: 8px 26px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background-color: #1ACF63;
+  float: right;
+  margin-top: 0.5%;
+  margin-right: 0.5%;
+}
 
 /* 
 ========================================================================================
 Card
 ========================================================================================
 */
+
+/* 
+========================================================================================
+Post Modal
+========================================================================================
+*/
+
