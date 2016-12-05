@@ -2,16 +2,9 @@ var express = require('express');
 var router = express.Router();
 var request = require('../node_modules/request');
 const scrapeIt = require('../node_modules/scrape-it');
-
+var Product = require('../models/product');
 
 router.get('/', function(req, res, next) {
-	// request('http://www.redbubble.com', function (error, response, body) {
-	//     if (!error && response.statusCode == 200) {
-	//     	console.log(body);
-	//       	res.send(body); // Show the HTML for the Google homepage.
-	//     }
- //  	})
-
 	// Promise interface
 	scrapeIt("http://www.redbubble.com/people/nadiacorfini/works/24003056-a-festive-mouse?grid_pos=5&p=classic-tee&ref=shop_grid", {
 	    imageURL: {
@@ -21,9 +14,14 @@ router.get('/', function(req, res, next) {
 	    productName: "h2.work-information_title",
 	    productType: "h3.work-information_product-type",
 	    price: "span.price.usd"
-
 	}).then(page => {
-	    console.log(page);
+	    console.log(productSample);
+	    var productSample = new Product(page);
+	    productSample.save(function(err) {
+		  if (err) throw err;
+		  console.log('Product saved successfully!');
+		});
+	    //now see if you can store this in mongo
 	});
 
 	// Callback interface
@@ -75,7 +73,7 @@ router.get('/', function(req, res, next) {
 	// }, (err, page) => {
 	//     console.log(err || page);
 	// });
-
+	res.send("scrape");
 });
 
 module.exports = router;

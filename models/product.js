@@ -2,7 +2,10 @@ var mongoose  = require('mongoose');
 var Schema  = mongoose.Schema;
 
 var ProductSchema = new Schema({
-    test: String
+    imageURL: String,
+    productName: String,
+    productType: String,
+    price: String
 }, {collection: 'products'});
 
 module.exports = mongoose.model('products', ProductSchema);
