@@ -15,6 +15,12 @@ var cheerio = require('cheerio');
 var cors = require('cors');
 var app = express();
 
+// Connect to MongoDB
+var mongodb = require('./modules/db');
+mongodb.connect('mongodb://rrtigga:styell2016@ds119618.mlab.com:19618/styell', function () {
+    console.log('Connected to MongoDB.');
+});
+
 //scraping test
 app.get('/rohit', function(req, res){
   request('http://www.rohittigga.com', function (error, response, body) {

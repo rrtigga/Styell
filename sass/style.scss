@@ -168,12 +168,16 @@ Text
 Sticky-Nav
 ========================================================================================
 */
+div.nav {
+  z-index: 1 !important;
+}
 
 .nav {
   padding: 0px 0;
   background-color: white;
   position: -webkit-sticky;
   text-align: center;
+  height: 68px;
 }
 
 .nav ul {
@@ -227,8 +231,8 @@ Sticky-Nav
   color: white;
   background-color: #1ACF63;
   float: right;
-  margin-top: 0.5%;
-  margin-right: 0.5%;
+  margin-top: 1%;
+  margin-right: 1%;
 }
 
 /* 
@@ -242,4 +246,6 @@ Card
 Post Modal
 ========================================================================================
 */
+
+
 
