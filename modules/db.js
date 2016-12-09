@@ -2,6 +2,7 @@
     var client = require('mongodb').MongoClient,
         mongodb;
  	var mongoose = require('mongoose');
+    mongoose.Promise = global.Promise;
 
     module.exports =  {
         connect: function (dburl, callback) {

@@ -4,7 +4,6 @@ var fs = require('fs');
 var request = require('request');
 var CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
-
 module.exports = {
     entry: "./main.js",
     output: {
@@ -17,7 +16,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['', '.webpack.js', '.web.js', '.js']
+        extensions: ['', '.webpack.js', '.web.js', '.js', '.json']
     },
     node: {
         console: 'empty',

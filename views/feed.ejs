@@ -19,10 +19,8 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <link rel="stylesheet" type="text/css" href="../node_modules/jquery-modal/jquery.modal.min.css">
   <!-- scripts below -->
-  <!-- The core React library -->
-  <script src="https://fb.me/react-15.2.0.js"></script>
-  <!-- The ReactDOM Library -->
-  <script src="https://fb.me/react-dom-15.2.0.js"></script>
+  <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="./node_modules/jquery-modal/jquery.modal.min.js"></script>
@@ -34,7 +32,7 @@
     });
   </script>
   <!-- bundle below -->
-  <script src="./bundle.js" type="text/javascript"></script>
+  <script type="text/javascript" src="https://d1l4stvdmqmdzl.cloudfront.net/4.0.2/mongoose.js"></script>
 </head>
 <body>
   <div class="nav">
@@ -43,14 +41,15 @@
     -->   
     <a href="#postModal" rel="modal:open"><div class="postButton">Post</div></a>
     <form style="display: none;" id="postModal" class="modal">
-      <input type="text" name="Enter url here">
+      <input id="productURL" type="text" name="Enter url here">
+      <a href="#" id="postProduct">Post</a>
     </form>
-
 </div>
 <div class="wrapper">
   <div class="masonry">
    <div id="clothing-content"></div>
  </div>
 </div>
+<script src="./bundle.js" type="text/javascript"></script>
 </body>
 </html>
