@@ -51,9 +51,11 @@
  </div>
 </div>
 <script type="text/javascript">
-  $.post('http://localhost:3000/scrape/redbubble', { productURL: "http://www.redbubble.com/people/chadcameron/works/6367106-snowman-with-carrot-nose-facing-hungry-bunnies?grid_pos=2&p=t-shirt&ref=shop_grid&style=mens"}, 
+$('#postProduct').click(function() { 
+  $.post('http://localhost:3000/scrape/redbubble', { productURL: $('#productURL').val()}, 
     function(result){
          console.log(result);
+  });
 });
 </script>
 </body>
