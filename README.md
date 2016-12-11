@@ -1,5 +1,13 @@
 # Styell
 
-npm install
+## Install
 
-nodemon
+```
+$ npm install
+```
+## Run Application
+
+```
+$ nodemon 
+
+```

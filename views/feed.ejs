@@ -50,13 +50,14 @@
    <div id="clothing-content"></div>
  </div>
 </div>
+
 <script type="text/javascript">
-$('#postProduct').click(function() { 
-  $.post('http://localhost:3000/scrape/redbubble', { productURL: $('#productURL').val()}, 
-    function(result){
-         console.log(result);
+  $('#postProduct').click(function() { 
+    $.post('http://localhost:3000/scrape/redbubble', { productURL: $('#productURL').val()}, 
+      function(result){
+           console.log(result);
+    });
   });
-});
 </script>
 </body>
 </html>

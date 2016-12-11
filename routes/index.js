@@ -20,21 +20,17 @@ router.get('/feed', function(req, res, next) {
   console.log("feed is here");
 });
 
-router.get('/test', function(req, res, next) {
-	// call the built-in save method to save to the database
-	sample.save(function(err) {
-	  if (err) throw err;
-
-	  console.log('Product saved successfully!');
-	});
+router.get('/getProducts', function(req, res, next) {
 	// get all the products
+	var productResults;
 	Product.find({}, function(err, products) {
 	  if (err) throw err;
-
 	  // object of all the products
+	  var productResults = products;
 	  console.log(products, "printing all the products");
 	});
-  res.send("lol");
+  res.json(productResults);
+
 });
 
 
