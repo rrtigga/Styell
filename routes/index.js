@@ -21,16 +21,13 @@ router.get('/feed', function(req, res, next) {
 });
 
 router.get('/getProducts', function(req, res, next) {
-	// get all the products
-	var productResults;
-	Product.find({}, function(err, products) {
-	  if (err) throw err;
-	  // object of all the products
-	  var productResults = products;
-	  console.log(products, "printing all the products");
-	});
-  res.json(productResults);
-
+    Product.find({}, function(err, products) {
+      if (err) throw err;
+      // object of all the products
+      var productResults = products;
+      console.log(products, "printing all the products");
+      res.json(productResults);
+    });
 });
 
 
