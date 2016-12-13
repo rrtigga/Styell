@@ -35,28 +35,31 @@
   <script type="text/javascript" src="https://d1l4stvdmqmdzl.cloudfront.net/4.0.2/mongoose.js"></script>
 </head>
 <body>
-  <div class="nav">
-  	<div class="floatLeft logo"></div>
-    <!-- 		<a href=""><ul><h3>Styell</h3></ul></a>
-    -->   
-    <a href="#postModal" rel="modal:open"><div class="postButton">Post</div></a>
-    <form style="display: none;" id="postModal" class="modal">
-      <input id="productURL" type="text" name="Enter url here">
-      <a href="#" id="postProduct">Post</a>
-    </form>
-</div>
-<div class="wrapper">
-  <div class="masonry">
-   <div id="clothing-content"></div>
+  <nav>
+    <ul>
+      <li><a><img src="/images/rohit.png" class="avatar-image avatar-image--icon" alt="Rohit Tigga"></a></li>
+      <li><a><img src="/images/search.png" class="search-image search-image--icon"></a></li>
+      <li>
+        <a href="#postModal" rel="modal:open"><div class="postButton">Post</div></a>
+        <form style="display: none;" id="postModal" class="modal">
+          <input id="productURL" type="text" name="Enter url here">
+          <a href="#" id="postProduct">Post</a>
+        </form>
+      </li>
+    </ul>
+  </nav>
+  <div class="wrapper">
+    <div class="masonry">
+     <div id="clothing-content"></div>
+   </div>
  </div>
-</div>
 
-<script type="text/javascript">
+ <script type="text/javascript">
   $('#postProduct').click(function() { 
     $.post('http://localhost:3000/scrape/redbubble', { productURL: $('#productURL').val()}, 
       function(result){
-           console.log(result);
-    });
+       console.log(result);
+     });
   });
 </script>
 </body>
