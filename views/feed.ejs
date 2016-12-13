@@ -24,13 +24,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="./node_modules/jquery-modal/jquery.modal.min.js"></script>
-  <script src="/javascripts/jquery-scrolltofixed-min.js" type="text/javascript"></script>
   <script src="/javascripts/clothes.js" type="text/babel"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('.nav').scrollToFixed();
-    });
-  </script>
   <!-- bundle below -->
   <script type="text/javascript" src="https://d1l4stvdmqmdzl.cloudfront.net/4.0.2/mongoose.js"></script>
 </head>
@@ -46,9 +40,22 @@
           <a href="#" id="postProduct">Post</a>
         </form>
       </li>
+      <li class="leftNav"><p class="navText">Stores</p class="navText"></li>
     </ul>
   </nav>
+
   <div class="wrapper">
+    <div class="tabs">
+      <p class="noWrap">
+        <span>Trending</span>
+        <span>New</span>
+        <span>Urban</span>
+        <span>Sports</span>
+        <span>Classy</span>
+        <span>Hipster</span>
+      </p>
+     
+    </div>
     <div class="masonry">
      <div id="clothing-content"></div>
    </div>
