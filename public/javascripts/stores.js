@@ -15,7 +15,7 @@ var RepeatModule = React.createClass({
       });
 
       return (
-         <div>
+         <div className="flex-container">
              {listItems}
          </div>
       );
@@ -24,7 +24,7 @@ var RepeatModule = React.createClass({
 /* make the items stateless */
 var ListItem = function(props) {
 	var backgroundImage = {
-	  backgroundImage: 'url(' + props.item.pictureURL + ')',
+	  backgroundImage: 'url(' + props.item.pictureURL + ')'
 	};
      return (
          <div className="block-grid-item">
