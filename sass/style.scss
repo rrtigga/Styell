@@ -2,7 +2,8 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 -Main
 -Text
--Sticky-Nav
+-Nav Bar
+-Post Modal
  */
 
 /* 
@@ -138,7 +139,6 @@ img {
 Text
 ========================================================================================
 */
-/* latin */
 
 
 .logo {
@@ -257,6 +257,152 @@ Post Modal
 ========================================================================================
 */
 
+/* 
+========================================================================================
+Stores
+========================================================================================
+*/
 
 
+#stores {
+  .flex-container {
+    padding: 0;
+    margin-top: 5% !important;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  *
+  {
+    margin: 0px;
+  }
+  a
+  {
+    background: transparent;
+  }
+  a:active,a:hover
+  {
+    outline: 0px;
+  }
+  img
+  {
+    border: 0px;
+  }
+  *
+  {
+    box-sizing: border-box;
+  }
+  .block-grid-item
+  {
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
+    padding: 15px;
+  }
+  .block-grid-no-whitespace > .block-grid-item
+  {
+    margin-right: 0px;
+  }
+  .placeholder
+  {
+    background-color: #f5f5f1;
+    position: relative;
+    transition: opacity 0.25s ease-out;
+  }
+  .placeholder::before
+  {
+    content: "";
+    display: block;
+    height: 0px;
+  }
+  .placeholder-content
+  {
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transition: opacity 0.25s ease-out;
+  }
+  .placeholder-landscape::before
+  {
+    padding: 0px 0px 79.412%;
+  }
+  a
+  {
+    color: #0192b5;
+    text-decoration: none;
+  }
+  a:hover,a:active
+  {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .card
+  {
+    background-color: #fff;
+    border-color: #e1e3df #e1e3df #cbccc9;
+    border-image: initial;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    max-width: 240px;
+    position: relative;
+    width: 100%;
+  }
+  .card img
+  {
+    display: block;
+  }
+  .card-img-wrap
+  {
+    margin: 2px;
+    position: relative;
+    background-size: cover;
+  }
+  .card-img-wrap img
+  {
+    width: 100%;
+  }
+  .card-img-wrap::after
+  {
+    background-color: #000;
+    bottom: 0px;
+    content: "";
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .card-meta
+  {
+    margin: 10px 8px;
+  }
+  [class^="block-grid-"] .card
+  {
+    max-width: none;
+    width: 100%;
+  }
+  .text-gray-darker
+  {
+    color: #222;
+  }
+  a.text-gray-darker:hover
+  {
+    color: #131313;
+  }
+  .display-block
+  {
+    display: block;
+  }
+
+}
 

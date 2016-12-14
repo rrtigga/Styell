@@ -20,6 +20,11 @@ router.get('/feed', function(req, res, next) {
   console.log("feed is here");
 });
 
+router.get('/stores', function(req, res, next) {
+  res.render('stores', { title: 'Express' });
+  console.log("stores is here");
+});
+
 router.get('/getProducts', function(req, res, next) {
     Product.find({}, function(err, products) {
       if (err) throw err;

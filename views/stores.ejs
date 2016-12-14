@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Styell</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Meta Information-->	
+	<meta name="description" content="Styell: Where Everyone Shops">
+	<meta name="keywords" content="urban, fashion, style, clothes, pinterest, rohit tigga, dope, trendy">
+	<meta name="author" content="Styell">
+	<meta property="og:site_name" content="Styell" />
+	<!--    <meta property="og:image" content="http://connect.com/assets/img/connect-share.jpg" />-->   
+	<meta property="og:title" content="Styell" />
+	<meta property="og:description" content="Life's too short to wear boring clothes.">
+	<meta property="og:url" content="http://styell.com" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0, maximum-scale=1.0">
+	<link rel='shortcut icon' type='image/x-icon' href='/images/favicon.png'/>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css' />
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<link rel="stylesheet" type="text/css" href="../node_modules/jquery-modal/jquery.modal.min.css">
+	<!-- scripts below -->
+	<script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+	<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="./node_modules/jquery-modal/jquery.modal.min.js"></script>
+	<script src="/javascripts/clothes.js" type="text/babel"></script>
+	<!-- bundle below -->
+	<script type="text/javascript" src="https://d1l4stvdmqmdzl.cloudfront.net/4.0.2/mongoose.js"></script>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a><img src="/images/rohit.png" class="avatar-image avatar-image--icon" alt="Rohit Tigga"></a></li>
+			<li><a><img src="/images/search.png" class="search-image search-image--icon"></a></li>
+			<li>
+				<a href="#postModal" rel="modal:open"><div class="postButton">Post</div></a>
+				<form style="display: none;" id="postModal" class="modal">
+					<input id="productURL" type="text" name="Enter url here">
+					<a href="#" id="postProduct">Post</a>
+				</form>
+			</li>
+			<li class="leftNav"><p class="navText">Stores</p class="navText"></li>
+		</ul>
+	</nav>
+
+	<div id="stores" class="wrapper">
+		<div class="flex-container">
+			<div class="block-grid-item">
+			  <a href="https://www.etsy.com/featured/personalized-and-custom-jewelry?ref=hp_g" class="display-block card text-gray-darker">
+			    <div style="background-image: url('http://www.rohittigga.com/img/realfriends.jpg');" class="card-img-wrap m-xs-0 placeholder placeholder-landscape">
+			    </div>
+			    <div class="card-meta">
+			      <div class="vesta-hp-gifts-card-title text-gray-darker">Personalized &amp; custom jewelry</div>
+			    </div>
+			  </a>
+			</div>
+			<div class="block-grid-item">
+			  <a href="https://www.etsy.com/featured/personalized-and-custom-jewelry?ref=hp_g" class="display-block card text-gray-darker">
+			    <div style="background-image: url('http://www.rohittigga.com/img/realfriends.jpg');" class="card-img-wrap m-xs-0 placeholder placeholder-landscape">
+			    </div>
+			    <div class="card-meta">
+			      <div class="vesta-hp-gifts-card-title text-gray-darker">Personalized &amp; custom jewelry</div>
+			    </div>
+			  </a>
+			</div>
+			<div class="block-grid-item">
+			  <a href="https://www.etsy.com/featured/personalized-and-custom-jewelry?ref=hp_g" class="display-block card text-gray-darker">
+			    <div style="background-image: url('http://www.rohittigga.com/img/realfriends.jpg');" class="card-img-wrap m-xs-0 placeholder placeholder-landscape">
+			    </div>
+			    <div class="card-meta">
+			      <div class="vesta-hp-gifts-card-title text-gray-darker">Personalized &amp; custom jewelry</div>
+			    </div>
+			  </a>
+			</div>
+			<div class="block-grid-item">
+			  <a href="https://www.etsy.com/featured/personalized-and-custom-jewelry?ref=hp_g" class="display-block card text-gray-darker">
+			    <div style="background-image: url('http://www.rohittigga.com/img/realfriends.jpg');" class="card-img-wrap m-xs-0 placeholder placeholder-landscape">
+			    </div>
+			    <div class="card-meta">
+			      <div class="vesta-hp-gifts-card-title text-gray-darker">Personalized &amp; custom jewelry</div>
+			    </div>
+			  </a>
+			</div>
+			<div class="block-grid-item">
+			  <a href="https://www.etsy.com/featured/personalized-and-custom-jewelry?ref=hp_g" class="display-block card text-gray-darker">
+			    <div style="background-image: url('http://www.rohittigga.com/img/realfriends.jpg');" class="card-img-wrap m-xs-0 placeholder placeholder-landscape">
+			    </div>
+			    <div class="card-meta">
+			      <div class="vesta-hp-gifts-card-title text-gray-darker">Personalized &amp; custom jewelry</div>
+			    </div>
+			  </a>
+			</div>
+			<div class="block-grid-item">
+			  <a href="https://www.etsy.com/featured/personalized-and-custom-jewelry?ref=hp_g" class="display-block card text-gray-darker">
+			    <div style="background-image: url('http://www.rohittigga.com/img/realfriends.jpg');" class="card-img-wrap m-xs-0 placeholder placeholder-landscape">
+			    </div>
+			    <div class="card-meta">
+			      <div class="vesta-hp-gifts-card-title text-gray-darker">Personalized &amp; custom jewelry</div>
+			    </div>
+			  </a>
+			</div>
+			<div class="block-grid-item">
+			  <a href="https://www.etsy.com/featured/personalized-and-custom-jewelry?ref=hp_g" class="display-block card text-gray-darker">
+			    <div style="background-image: url('http://www.rohittigga.com/img/realfriends.jpg');" class="card-img-wrap m-xs-0 placeholder placeholder-landscape">
+			    </div>
+			    <div class="card-meta">
+			      <div class="vesta-hp-gifts-card-title text-gray-darker">Personalized &amp; custom jewelry</div>
+			    </div>
+			  </a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$('#postProduct').click(function() { 
+			$.post('http://localhost:3000/scrape/redbubble', { productURL: $('#productURL').val()}, 
+				function(result){
+					console.log(result);
+				});
+		});
+	</script>
+</body>
+</html>
