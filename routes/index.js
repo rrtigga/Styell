@@ -25,6 +25,11 @@ router.get('/stores', function(req, res, next) {
   console.log("stores is here");
 });
 
+router.get('/adidas', function(req, res, next) {
+  res.render('adidas', { title: 'Express' });
+  console.log("adidas is here");
+});
+
 router.get('/getProducts', function(req, res, next) {
     Product.find({}, function(err, products) {
       if (err) throw err;

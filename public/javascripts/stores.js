@@ -13,7 +13,6 @@ var RepeatModule = React.createClass({
             <ListItem item={item}/>
          );
       });
-
       return (
          <div className="flex-container">
              {listItems}
@@ -41,27 +40,62 @@ var ListItem = function(props) {
 var data = [
 	{	
 		"storeName": "Adidas",
-		"pictureURL": "http://www.rohittigga.com/img/realfriends.jpg",
+		"pictureURL": "../images/stores/adidas.jpg",
 		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
 	},
 	{	
-		"storeName": "Adidas",
-		"pictureURL": "http://www.rohittigga.com/img/realfriends.jpg",
+		"storeName": "American Eagle",
+		"pictureURL": "../images/stores/americaneagle.jpg",
 		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
 	},
 	{	
-		"storeName": "Adidas",
-		"pictureURL": "http://www.rohittigga.com/img/realfriends.jpg",
+		"storeName": "ASOS",
+		"pictureURL": "../images/stores/asos.jpg",
 		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
 	},
 	{	
-		"storeName": "Adidas",
-		"pictureURL": "http://www.rohittigga.com/img/realfriends.jpg",
+		"storeName": "H&M",
+		"pictureURL": "../images/stores/h&m.jpeg",
 		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
 	},
 	{	
-		"storeName": "Adidas",
-		"pictureURL": "http://www.rohittigga.com/img/realfriends.jpg",
+		"storeName": "Nike",
+		"pictureURL": "../images/stores/nike.jpg",
+		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
+	},
+	{	
+		"storeName": "Northface",
+		"pictureURL": "../images/stores/northface.jpeg",
+		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
+	},
+	{	
+		"storeName": "Obey",
+		"pictureURL": "../images/stores/obey.jpg",
+		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
+	},
+	{	
+		"storeName": "Pac Sun",
+		"pictureURL": "../images/stores/pacsun.jpg",
+		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
+	},
+	{	
+		"storeName": "Stussy",
+		"pictureURL": "../images/stores/stussy.jpeg",
+		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
+	},
+	{	
+		"storeName": "Super Dry",
+		"pictureURL": "../images/stores/superdry.gif",
+		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
+	},
+	{	
+		"storeName": "Supreme",
+		"pictureURL": "../images/stores/supreme.jpg",
+		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
+	},
+	{	
+		"storeName": "Uniqlo",
+		"pictureURL": "../images/stores/uniqlo.jpg",
 		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
 	}
 ];
