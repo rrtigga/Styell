@@ -168,10 +168,12 @@ nav {
     float: right; }
   nav li a {
     display: block;
-    color: white;
+    color: #3D3B3B;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none; }
+  nav .padding-link {
+    padding: 2px 16px; }
   nav .avatar-image {
     display: inline-block;
     vertical-align: middle;
@@ -188,6 +190,69 @@ nav {
     font-size: 16px;
     font-weight: 300; }
   nav .leftNav {
+    float: left;
+    padding: 5px 0px 0px 50px; }
+
+.tabs {
+  color: #9B9B9B;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 65px;
+  height: 50px; }
+  .tabs .noWrap {
+    white-space: nowrap;
+    overflow-x: scroll;
+    height: 100%; }
+    .tabs .noWrap span {
+      padding: 0px 20px; }
+
+/* 
+========================================================================================
+Purple Nav bar 
+========================================================================================
+*/
+nav.purpleNav {
+  color: white !important; }
+  nav.purpleNav ul {
+    max-height: 68px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #5450DC;
+    position: fixed;
+    width: 100%;
+    z-index: 1 !important; }
+  nav.purpleNav li {
+    float: right; }
+  nav.purpleNav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0px 24px;
+    text-decoration: none; }
+  nav.purpleNav .signUp {
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    padding: 4px 14px; }
+  nav.purpleNav .signIn {
+    padding: 8px; }
+  nav.purpleNav .avatar-image {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 100%; }
+  nav.purpleNav .avatar-image--icon {
+    width: 32px;
+    height: 32px; }
+  nav.purpleNav .search-image--icon {
+    width: 20px;
+    height: 20px;
+    padding: 5px; }
+  nav.purpleNav .navText {
+    color: #9B9B9B;
+    font-size: 16px;
+    font-weight: 300; }
+  nav.purpleNav .leftNav {
     float: left;
     padding: 5px 0px 0px 50px; }
 
