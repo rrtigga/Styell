@@ -187,6 +187,7 @@ Nav bar
 nav {
   top: 0;
   height: 100%;
+
   ul {
     list-style-type: none;
     margin: 0;
@@ -255,7 +256,7 @@ nav {
 
 /* 
 ========================================================================================
-Purple Nav bar 
+Purple Sign Up Page 
 ========================================================================================
 */
 nav.purpleNav {
@@ -318,19 +319,14 @@ nav.purpleNav {
   }
 }
 
-.tabs {
-  color: #9B9B9B;
-  font-size: 16px;
-  font-weight: 300;
-  margin-top: 65px;
-  height: 50px;
-  .noWrap {
-    white-space: nowrap;
-    overflow-x: scroll;
-    height: 100%;
-    span{
-      padding: 0px 20px;
-    }
+.purpleSignupCard {
+  background-color: #5450DC;
+  border-radius: 8px;
+  p {
+    text-align: center
+  }
+  h1 {
+    text-align: center;
   }
 }
 
