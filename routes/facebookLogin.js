@@ -4,7 +4,7 @@ var request = require('../node_modules/request');
 var User = require('../models/user');
 
 router.post('/', function(req, res, next) {
-  var userData = new User(req.body.userData);
+  var userData = new User(req.body);
   console.log(userData, "here is the userData");
   userData.save(function(err) {
     if (err) throw err;

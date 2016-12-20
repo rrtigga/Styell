@@ -14,7 +14,6 @@ window.fbAsyncInit = function() {
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
   console.log('statusChangeCallback');
@@ -38,7 +37,6 @@ function statusChangeCallback(response) {
   }
 }
 
-
 function fb_login(){
   FB.login(function(response) {
     if (response.authResponse) {
@@ -57,7 +55,6 @@ function fb_login(){
       }, {'scope': 'public_profile,email,user_friends,user_likes,user_location'});
 }
 
-
 function getData(accessToken) {
   var userData;
   FB.api('/me', 'get', { access_token: accessToken, fields: 'id,name,gender,email,location,friends,likes,picture' }, function(response) {
@@ -69,13 +66,22 @@ function getData(accessToken) {
     FB.api("/me/picture?width=1000&height=1000",  function(response) {
       userData.picture.data.url = response.data.url;
       console.log(userData);
-      $.post('http://localhost:3000/facebookLogin',{userData: userData},
-        function(result){
-         console.log(result);
-       });
-    });
+      $.ajax({
+        type: 'POST',
+        data: JSON.stringify(userData),
+        contentType: "application/json",
+        //contentType: "application/x-www-form-urlencoded",
+        dataType:'json',
+        url: 'http://localhost:3000/facebookLogin',                      
+        success: function(data) {
+          console.log(JSON.stringify(data), "JSON User Object here");                               
+        },
+        error: function(error) {
+          console.log(error);
+        }
 
-    
+      });
+    });
   });
 
   //check if the loginStatus works
@@ -98,5 +104,3 @@ function getData(accessToken) {
     }
   });
 }
-
-
