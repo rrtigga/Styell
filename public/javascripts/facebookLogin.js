@@ -79,7 +79,6 @@ function getData(accessToken) {
         error: function(error) {
           console.log(error);
         }
-
       });
     });
   });
