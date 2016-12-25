@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var scrape = require('./routes/scrape');
+var start = require('./routes/start');
 var facebookLogin = require('./routes/facebookLogin');
 var connect = require('connect');
 var sassMiddleware = require('node-sass-middleware');
@@ -65,6 +66,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/scrape', scrape);
 app.use('/facebookLogin', facebookLogin);
+app.use('/start', start);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
