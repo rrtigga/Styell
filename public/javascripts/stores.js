@@ -7,6 +7,29 @@ var RepeatModule = React.createClass({
      this.setState({ items : data })
      console.log(data,"data is here");
    },
+   handleClick: function (event, item) {
+		event.preventDefault();
+		window.newActiveItems = this.state.activeItems.slice();
+		var index = window.newActiveItems.indexOf(item);
+		if(index !== -1){
+         //check if array is empty, if so set display:none to the topic-bar
+         if(newActiveItems.length <= 3){
+            document.getElementById("topic-progress-bar").style.transform="translateY(60px)";
+         }
+			window.newActiveItems.splice(index, 1);
+		}
+		else {
+         //check if array has more than 3 items
+         //if more than 3 items, then show the topic bar
+         if(newActiveItems.length >= 2){
+            document.getElementById("topic-progress-bar").style.transform="translateY(0px)";
+         }
+			window.newActiveItems.push(item);
+		}
+		console.log(window.newActiveItems);
+		this.setState({ activeItems: window.newActiveItems});
+
+	},
    render: function() {
       var listItems = this.state.items.map(function(item) {
          return (
@@ -27,7 +50,7 @@ var ListItem = function(props) {
 	};
      return (
          <div className="block-grid-item">
-		  <a href={props.item.storeURL} className="display-block card text-gray-darker">
+		  <a className="display-block card text-gray-darker">
 		    <div style={backgroundImage} className="card-img-wrap m-xs-0 placeholder placeholder-landscape">
 		    </div>
 		    <div className="card-meta">
