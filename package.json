@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "case-sensitive-paths-webpack-plugin": "^1.1.4",
-    "json-loader": "^0.5.4"
+    "json-loader": "^0.5.4",
+    "nodemon": "^1.11.0"
   }
 }
