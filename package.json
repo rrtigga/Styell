@@ -23,6 +23,7 @@
     "nightmare": "^2.8.1",
     "node-sass": "^3.10.1",
     "node-sass-middleware": "^0.9.8",
+    "nodemon": "^1.11.0",
     "npm": "^4.0.2",
     "request": "^2.75.0",
     "requestify": "^0.2.5",
