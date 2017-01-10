@@ -30,7 +30,7 @@ var ListItem = function(props) {
 	};
      return (
          <div className="block-grid-item">
-		  <a className="display-block card text-gray-darker">
+		  <a href={props.item.storeURL} className="display-block card text-gray-darker">
 		    <div style={backgroundImage} className="card-img-wrap m-xs-0 placeholder placeholder-landscape _this.state.activeKey === i ? 'active' : '' ">
 		    </div>
 		    <div className="card-meta">
@@ -44,7 +44,7 @@ var data = [
 	{	
 		"storeName": "Adidas",
 		"pictureURL": "../images/stores/adidas.jpg",
-		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
+		"storeURL": "../profile/adidas"
 	},
 	{	
 		"storeName": "American Eagle",
@@ -103,3 +103,6 @@ var data = [
 	}
 ];
 ReactDOM.render(<RepeatModule items={data} />, document.getElementById('stores-content'));
+
+
+
