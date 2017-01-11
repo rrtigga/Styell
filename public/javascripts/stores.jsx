@@ -30,7 +30,7 @@ var ListItem = function(props) {
 	};
      return (
          <div className="block-grid-item">
-		  <a href={props.item.storeURL} className="display-block card text-gray-darker">
+		  <a className="display-block card text-gray-darker">
 		    <div style={backgroundImage} className="card-img-wrap m-xs-0 placeholder placeholder-landscape _this.state.activeKey === i ? 'active' : '' ">
 		    </div>
 		    <div className="card-meta">
@@ -54,6 +54,11 @@ var data = [
 	{	
 		"storeName": "ASOS",
 		"pictureURL": "../images/stores/asos.jpg",
+		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
+	},
+	{	
+		"storeName": "Etsy",
+		"pictureURL": "../images/stores/etsy.jpeg",
 		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
 	},
 	{	
@@ -82,6 +87,11 @@ var data = [
 		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
 	},
 	{	
+		"storeName": "RedBubble",
+		"pictureURL": "../images/stores/redbubble.jpg",
+		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
+	},
+	{	
 		"storeName": "Stussy",
 		"pictureURL": "../images/stores/stussy.jpeg",
 		"storeURL": "http://www.rohittigga.com/img/realfriends.jpg"
@@ -103,6 +113,5 @@ var data = [
 	}
 ];
 ReactDOM.render(<RepeatModule items={data} />, document.getElementById('stores-content'));
-
 
 

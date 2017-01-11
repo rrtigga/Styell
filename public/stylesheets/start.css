@@ -402,7 +402,7 @@ Stores
   opacity: 0.6;
   background-color: #5450DC; }
 
-#stores .card-img-wrap.active::after {
+#stores .card-img-wrap.afterClick::after {
   background-color: #000;
   bottom: 0px;
   content: "";

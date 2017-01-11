@@ -29,7 +29,7 @@ var ListItem = function(props) {
          <div className='brick' key={props.item._id}>
            <div>
                <a target='_blank' href={props.item.productURL}><img src={props.item.imageURL}/></a>
-               <p className='itemName'>Short Sleeve Oxford Dress Shirt, White, Large</p>
+               <p className='itemName'>{props.item.productName}</p>
                <p className='storeName'>Nike Factory Store</p>
                <img className='foundPicture' src='../images/rohit.png'/>
            </div>

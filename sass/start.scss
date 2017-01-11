@@ -494,7 +494,7 @@ Stores
     opacity: 0.6;
     background-color: #5450DC;
   }
-  .card-img-wrap.active::after
+  .card-img-wrap.afterClick::after
   {
     background-color: #000;
     bottom: 0px;
