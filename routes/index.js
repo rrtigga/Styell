@@ -42,7 +42,7 @@ router.get('/getProducts', function(req, res, next) {
     if (err) throw err;
       // object of all the products
       var productResults = products;
-      console.log(products, "printing all the products");
+      //console.log(products, "printing all the products");
       res.json(productResults);
     });
 });

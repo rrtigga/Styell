@@ -6,7 +6,7 @@ var RepeatModule = React.createClass({
      console.log("componentWillMount()")
      $.get("http://localhost:3000/getProducts", function( data ) {
          this.setState({ items : data })
-         console.log(data,"data is here");
+         // console.log(data,"data is here");
       }.bind(this));
    },
    render: function() {

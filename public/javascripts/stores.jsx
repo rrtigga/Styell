@@ -1,19 +1,20 @@
 var RepeatModule = React.createClass({
-   getInitialState: function() {
-      return { items: this.props.items || [] }
+	getInitialState: function() {
+		this.state = {afterClick: false};
+    	return { items: this.props.items || [] }
    },
    componentWillMount: function() {
      console.log("componentWillMount()")
      this.setState({ items : data })
-     console.log(data,"data is here");
-   },
+    },
    handleClick: function (e, item) {
-   	this.setState({active: true});
+    this.setState({afterClick: true});
+    console.log("afterClick");
    },
    render: function() {
-      var listItems = this.state.items.map(function(item) {
+      var listItems = this.state.items.map((item, index) => {
          return (
-            <ListItem item={item}/>
+            <ListItem key={index} handleClick={this.handleClick} item={item} />
          );
       });
       return (
@@ -25,19 +26,20 @@ var RepeatModule = React.createClass({
 });
 /* make the items stateless */
 var ListItem = function(props) {
-	var backgroundImage = {
-	  backgroundImage: 'url(' + props.item.pictureURL + ')'
-	};
+    var backgroundImage = {
+      backgroundImage: 'url(' + props.item.pictureURL + ')'
+    };
      return (
          <div className="block-grid-item">
-		  <a className="display-block card text-gray-darker">
-		    <div style={backgroundImage} className="card-img-wrap m-xs-0 placeholder placeholder-landscape _this.state.activeKey === i ? 'active' : '' ">
-		    </div>
-		    <div className="card-meta">
-		      <div className="vesta-hp-gifts-card-title text-gray-darker">{props.item.storeName}</div>
-		    </div>
-		  </a>
-		</div>
+          <a className="display-block card text-gray-darker">
+            <div onClick={props.handleClick} style={backgroundImage} className="card-img-wrap m-xs-0 placeholder placeholder-landscape">
+            
+            </div>
+            <div className="card-meta">
+              <div className="vesta-hp-gifts-card-title text-gray-darker">{props.item.storeName}</div>
+            </div>
+          </a>
+        </div>
      );
 }
 var data = [
