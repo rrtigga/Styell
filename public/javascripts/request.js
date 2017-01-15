@@ -9,25 +9,17 @@ function rootDomain(url) {
 	var rightPeriodIndex;
 	for (var i = url.length - 1; i >= 0; i--) {
 		if(url[i] == '.') {
-			console.log("rightPeriodIndex", i);
+			//console.log("rightPeriodIndex", i);
 			rightPeriodIndex = i;
-			for (var j = rightPeriodIndex - 1; j >= 0; j--) {
-				if(url[j] == "/" || url[j]== "."){
-					//parse between that character and rightPeriodIndex 
-					var rootDomain = url.substring(url.lastIndexOf(url[j])+1,url.lastIndexOf("."));
-					//return word
-					return rootDomain;
-				}
-				else {
-					//strip out the extension from the url string
-					//return word
-					var rootDomain = url.substring(0, url.indexOf("."));
-					return rootDomain;
-				}
-			}
-			
+			var noExtension = url.substr(0,i);
+			console.log("this is noExtension", noExtension);
+			break;
 		}
 	}
+	var result = noExtension.substring(noExtension.lastIndexOf(".") + 1);
+	return result;
 }
-
 console.log(rootDomain("facebook.com"));
+console.log(rootDomain("https://www.etsy.com/market/tumblr_clothing"));
+console.log(rootDomain("https://petitions.whitehouse.gov/"));
+console.log(rootDomain("google.ca"));
