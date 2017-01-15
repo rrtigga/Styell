@@ -1,5 +1,5 @@
 $('#postProduct').click(function() { 
-	$.post('http://localhost:3000/scrape/redbubble', { productURL: $('#productURL').val()}, 
+	$.post('http://localhost:3000/scrape/obey', { productURL: $('#productURL').val()}, 
 		function(result){
 			console.log(result);
 		});
@@ -19,7 +19,3 @@ function rootDomain(url) {
 	var result = noExtension.substring(noExtension.lastIndexOf(".") + 1);
 	return result;
 }
-console.log(rootDomain("facebook.com"));
-console.log(rootDomain("https://www.etsy.com/market/tumblr_clothing"));
-console.log(rootDomain("https://petitions.whitehouse.gov/"));
-console.log(rootDomain("google.ca"));

@@ -53,4 +53,76 @@ router.post('/etsy', function(req, res, next) {
 	res.send(newProduct);
 });
 
+router.post('/hm', function(req, res, next) {
+	// Promise interface
+	var productURL = req.body.productURL;
+	scrapeIt(productURL, {
+	    imageURL: {
+	    	selector: "#product-image-box img",
+	    	attr: "src"
+	    },
+	    productName: "#product h1",
+	    productType: "h3.work-information_product-type",
+	    price: "#text-price",
+	    productURL: "button#ask-a-question data-message"
+	}).then(page => {
+	    newProduct = new Product(page);
+	    newProduct["productURL"] = productURL;
+	    console.log(newProduct);
+	    newProduct.save(function(err) {
+		  if (err) throw err;
+		  console.log('Product saved successfully!');
+		});
+	});
+	res.send(newProduct);
+});
+
+router.post('/supreme', function(req, res, next) {
+	// Promise interface
+	var productURL = req.body.productURL;
+	scrapeIt(productURL, {
+	    imageURL: {
+	    	selector: "#img-main",
+	    	attr: "src"
+	    },
+	    productName: "#details h1",
+	    productType: "h3.work-information_product-type",
+	    price: ".price span",
+	    productURL: "button#ask-a-question data-message"
+	}).then(page => {
+	    newProduct = new Product(page);
+	    newProduct["productURL"] = productURL;
+	    console.log(newProduct);
+	    newProduct.save(function(err) {
+		  if (err) throw err;
+		  console.log('Product saved successfully!');
+		});
+	});
+	res.send(newProduct);
+});
+
+router.post('/obey', function(req, res, next) {
+	// Promise interface
+	var productURL = req.body.productURL;
+	scrapeIt(productURL, {
+	    imageURL: {
+	    	selector: "img.cloudzoom",
+	    	attr: "src"
+	    },
+	    productName: "h1.product-info-title",
+	    productType: "h3.work-information_product-type",
+	    price: "p.product-info-price js-price",
+	    productURL: "button#ask-a-question data-message"
+	}).then(page => {
+	    newProduct = new Product(page);
+	    newProduct["productURL"] = productURL;
+	    console.log(newProduct);
+	    newProduct.save(function(err) {
+		  if (err) throw err;
+		  console.log('Product saved successfully!');
+		});
+	});
+	res.send(newProduct);
+});
+
 module.exports = router;
