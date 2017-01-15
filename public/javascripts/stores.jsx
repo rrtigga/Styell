@@ -1,6 +1,5 @@
 var RepeatModule = React.createClass({
 	getInitialState: function() {
-		this.state = {afterClick: false};
     	return { items: this.props.items || [] }
    },
    componentWillMount: function() {
@@ -8,7 +7,7 @@ var RepeatModule = React.createClass({
      this.setState({ items : data })
     },
    handleClick: function (e, item) {
-    this.setState({afterClick: true});
+    this.setState({afterClick: 'afterClick'});
     console.log("afterClick");
    },
    render: function() {
@@ -32,7 +31,7 @@ var ListItem = function(props) {
      return (
          <div className="block-grid-item">
           <a className="display-block card text-gray-darker">
-            <div onClick={props.handleClick} style={backgroundImage} className="card-img-wrap m-xs-0 placeholder placeholder-landscape">
+            <div onClick={props.handleClick} style={backgroundImage} className="this.state.afterClick card-img-wrap m-xs-0 placeholder placeholder-landscape">
             
             </div>
             <div className="card-meta">
